@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bentley's Bandanas — Personalized Dog Bandanas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="wordmark">Bentley's Bandanas</div>
+      <div class="nav-trust">★ 4.9 &nbsp;·&nbsp; 4,000+ orders &nbsp;·&nbsp; Canton, MA</div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="eyebrow">Handmade · Personalized · Shipped in 2–3 days</span>
+      <h1>The bandana<br/>made for <em>your</em> dog.</h1>
+      <p class="hero-sub">Type your dog's name, pick a color, and we'll make it.<br/>Heat-pressed by hand. Not by a factory.</p>
+
+      <!-- PERSONALIZATION CARD -->
+      <div class="card personalize-card">
+        <label class="form-label" for="dog-name">Your Dog's Name</label>
+        <input class="input" id="dog-name" type="text" placeholder="e.g. Bentley" maxlength="20" />
+
+        <label class="form-label" style="margin-top:20px;">Bandana Color</label>
+        <div class="swatches">
+          <button class="swatch active" style="background:#EE7F1B;" aria-label="Bandana Orange" title="Bandana Orange"></button>
+          <button class="swatch" style="background:#D9BA8E;" aria-label="Puppy Tan" title="Puppy Tan"></button>
+          <button class="swatch" style="background:#3A2E22;" aria-label="Bentley Brown" title="Bentley Brown"></button>
+          <button class="swatch" style="background:#F6E9D8;border:2px solid #D9BA8E;" aria-label="Cream" title="Cream"></button>
+          <button class="swatch" style="background:#c0392b;" aria-label="Classic Red" title="Classic Red"></button>
+          <button class="swatch" style="background:#2c3e50;" aria-label="Midnight Navy" title="Midnight Navy"></button>
+        </div>
+
+        <label class="form-label" style="margin-top:20px;">Size</label>
+        <div class="size-pills">
+          <button class="pill active">S — Puppy</button>
+          <button class="pill">M — Medium</button>
+          <button class="pill">L — Large</button>
+          <button class="pill">XL — Big Dog</button>
+        </div>
+
+        <div class="preview-row">
+          <div class="preview-badge">
+            <span class="preview-name" id="preview-name">Bentley</span>
+            <span class="preview-sub">Preview</span>
+          </div>
+        </div>
+
+        <button class="btn-primary" style="width:100%;margin-top:24px;">Personalize &amp; Checkout →</button>
+        <p class="fine-print">Free shipping over $35 &nbsp;·&nbsp; Ships in 2–3 days &nbsp;·&nbsp; Made by a family, not a factory.</p>
+      </div>
+    </div>
+
+    <!-- FLOATING TRUST BADGE -->
+    <div class="trust-float">
+      <span class="trust-stars">★★★★★</span>
+      <span class="trust-text">4.9 &nbsp;·&nbsp; 500+ reviews &nbsp;·&nbsp; 5 years on Etsy</span>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works">
+    <div class="section-inner">
+      <h2>Made in three steps.</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">01</span>
+          <h3>Type your dog's name</h3>
+          <p>We cut every name from premium vinyl — no iron-on sheets, no cracking.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">02</span>
+          <h3>Pick your color</h3>
+          <p>Six colors pulled from Bentley's own palette. All look great on dogs.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">03</span>
+          <h3>We ship it fast</h3>
+          <p>Heat-pressed, folded, and shipped in 2–3 business days from Canton, MA.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF STRIP -->
+  <section class="proof-strip">
+    <div class="proof-inner">
+      <div class="proof-stat">
+        <span class="stat-num">4,000+</span>
+        <span class="stat-label">Orders shipped</span>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-stat">
+        <span class="stat-num">4.9★</span>
+        <span class="stat-label">Average rating</span>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-stat">
+        <span class="stat-num">5 yrs</span>
+        <span class="stat-label">On Etsy</span>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-stat">
+        <span class="stat-num">2–3</span>
+        <span class="stat-label">Days to ship</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews">
+    <div class="section-inner">
+      <h2>What people actually say.</h2>
+      <div class="review-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>"My dog looked so good at the park. Three people asked where I got the bandana. Ordered two more."</p>
+          <span class="reviewer">— Sarah M., Boston MA</span>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>"Shipped so fast. The vinyl name is crispy clean. You can tell real people made this."</p>
+          <span class="reviewer">— Jake T., Providence RI</span>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>"Ordered for my Golden. It arrived in 2 days and looks exactly like the preview. Couldn't be happier."</p>
+          <span class="reviewer">— Michelle K., Canton MA</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="wordmark" style="font-size:18px;">Bentley's Bandanas</span>
+      <p>Five years, 4,000+ orders, one family in Canton, MA.</p>
+      <div class="footer-links">
+        <a href="#">Shop All</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">FAQ</a>
+      </div>
+      <p class="fine-print" style="margin-top:16px;">© 2026 Bentley's Bandanas · Canton, Massachusetts</p>
+    </div>
+  </footer>
+
+  <script>
+    // Live name preview
+    const input = document.getElementById('dog-name');
+    const preview = document.getElementById('preview-name');
+    input.addEventListener('input', () => {
+      preview.textContent = input.value.trim() || 'Bentley';
+    });
+
+    // Swatch selection
+    document.querySelectorAll('.swatch').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.swatch').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const color = btn.style.background;
+        document.querySelector('.preview-badge').style.background = color;
+      });
+    });
+
+    // Size pill selection
+    document.querySelectorAll('.pill').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.pill').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

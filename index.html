@@ -3,108 +3,252 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bentley's Bandanas — Personalized Dog Bandanas</title>
+  <title>Bentley's Bandanas</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="page-shell">
-    <header class="site-header">
-      <div class="header-left">
-        <img src="BB logo.jpeg" alt="Bentley's Bandanas logo" class="site-logo" />
-        <div>
-          <p class="eyebrow">Personalized dog bandanas</p>
-          <p class="brand-name">Bentley's Bandanas</p>
-        </div>
-      </div>
-      <div class="header-right">Canton, Massachusetts</div>
-    </header>
 
-    <main>
-      <section class="hero editorial-hero">
-        <div class="hero-copy">
-          <p class="micro-copy">Made by people who actually know dogs.</p>
-          <h1>Custom bandanas for dogs, and nothing else.</h1>
-          <p class="hero-text">Type your dog's name, choose a color, and we make it by hand. Clean vinyl lettering, fast turnaround, no factory feel.</p>
-          <div class="hero-actions">
-            <a href="#personalize" class="btn-primary">Start Personalizing</a>
-            <p class="inline-proof">4.9★ shop · 4,000+ orders · ships in 2–3 days</p>
-          </div>
-        </div>
-
-        <div class="hero-art">
-          <div class="hero-logo-frame">
-            <img src="BB logo.jpeg" alt="Illustrated puppy wearing an orange bandana" class="hero-logo" />
-          </div>
-        </div>
-      </section>
-
-      <section class="personalizer" id="personalize">
-        <div class="personalizer-top">
-          <p class="section-kicker">Personalize</p>
-          <h2>Your dog's bandana preview.</h2>
-        </div>
-
-        <div class="personalizer-grid">
-          <div class="preview-panel">
-            <div class="bandana-stage">
-              <div class="bandana-shape" id="bandana-shape">
-                <span id="preview-name" class="bandana-name">Bentley</span>
-              </div>
-            </div>
-            <p class="preview-caption">Simple, bold, and easy to read from across the dog park.</p>
-          </div>
-
-          <div class="controls-panel">
-            <label class="form-label" for="dog-name">Dog's name</label>
-            <input id="dog-name" class="input" type="text" placeholder="Bentley" maxlength="20" />
-
-            <label class="form-label top-gap">Bandana color</label>
-            <div class="swatches">
-              <button class="swatch active" data-color="#EE7F1B" style="background:#EE7F1B" aria-label="Bandana Orange"></button>
-              <button class="swatch" data-color="#D9BA8E" style="background:#D9BA8E" aria-label="Puppy Tan"></button>
-              <button class="swatch" data-color="#3A2E22" style="background:#3A2E22" aria-label="Bentley Brown"></button>
-              <button class="swatch cream-swatch" data-color="#F6E9D8" style="background:#F6E9D8" aria-label="Cream"></button>
-            </div>
-
-            <label class="form-label top-gap">Why people order</label>
-            <ul class="reason-list">
-              <li>Personalized for one dog at a time.</li>
-              <li>Made by hand in Canton, MA.</li>
-              <li>Fast shipping without looking mass produced.</li>
-            </ul>
-
-            <a href="#" class="btn-primary full-width">Personalize &amp; Checkout</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="trust-row">
-        <div class="trust-item"><span>4,000+</span><p>orders</p></div>
-        <div class="trust-item"><span>4.9★</span><p>average rating</p></div>
-        <div class="trust-item"><span>2–3 days</span><p>to ship</p></div>
-      </section>
-    </main>
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <span>Free shipping over $35</span>
+    <span class="topbar-dot">&bull;</span>
+    <span>Ships in 2&ndash;3 days from Canton, MA</span>
+    <span class="topbar-dot">&bull;</span>
+    <span>4.9&#9733; &nbsp;4,000+ orders</span>
   </div>
 
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-logo">
+      <img src="BB logo.jpeg" alt="Bentley's Bandanas" class="nav-logo-img" />
+      <span class="nav-wordmark">Bentley's Bandanas</span>
+    </div>
+    <div class="nav-links">
+      <a href="#personalize">Personalize</a>
+      <a href="#about">Our Story</a>
+    </div>
+    <a href="#personalize" class="nav-cta">Order Now</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <!-- LEFT: TEXT -->
+    <div class="hero-left">
+      <p class="label">Personalized &bull; Handmade &bull; Canton, MA</p>
+      <h1>The bandana<br/><em>your dog</em><br/>deserves.</h1>
+      <p class="hero-body">Type a name. Pick a color.<br/>We cut it from vinyl and ship it in 2&ndash;3 days.<br/>Made by a family. Not a factory.</p>
+      <a href="#personalize" class="btn-hero">Start Personalizing &rarr;</a>
+      <div class="hero-trust">
+        <div class="trust-pill">&#9733;&#9733;&#9733;&#9733;&#9733; 4.9</div>
+        <span class="trust-sub">500+ five-star reviews</span>
+      </div>
+    </div>
+
+    <!-- RIGHT: LIVE PREVIEW -->
+    <div class="hero-right" id="personalize">
+      <div class="preview-card">
+
+        <!-- BANDANA VISUAL -->
+        <div class="bandana-wrap">
+          <div class="bandana" id="bandana">
+            <svg class="bandana-svg" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+              <polygon id="bandana-poly" points="160,190 10,10 310,10" fill="#EE7F1B"/>
+              <text id="bandana-text" x="160" y="88" text-anchor="middle"
+                font-family="Fredoka, sans-serif" font-size="36" font-weight="700" fill="white"
+                dominant-baseline="middle">Bentley</text>
+            </svg>
+          </div>
+          <p class="preview-note">Live preview &mdash; updates as you type</p>
+        </div>
+
+        <!-- FORM -->
+        <div class="form-section">
+          <label class="field-label" for="dog-name">Your dog&rsquo;s name</label>
+          <input id="dog-name" class="name-input" type="text" placeholder="Type a name..." maxlength="14" autocomplete="off" />
+
+          <label class="field-label" style="margin-top:20px;">Color</label>
+          <div class="color-row">
+            <button class="color-btn active" data-hex="#EE7F1B" data-text="white">
+              <span class="color-dot" style="background:#EE7F1B"></span>
+              <span>Orange</span>
+            </button>
+            <button class="color-btn" data-hex="#D9BA8E" data-text="#3A2E22">
+              <span class="color-dot" style="background:#D9BA8E"></span>
+              <span>Tan</span>
+            </button>
+            <button class="color-btn" data-hex="#3A2E22" data-text="white">
+              <span class="color-dot" style="background:#3A2E22"></span>
+              <span>Brown</span>
+            </button>
+            <button class="color-btn" data-hex="#c0392b" data-text="white">
+              <span class="color-dot" style="background:#c0392b"></span>
+              <span>Red</span>
+            </button>
+            <button class="color-btn" data-hex="#2d4a6e" data-text="white">
+              <span class="color-dot" style="background:#2d4a6e"></span>
+              <span>Navy</span>
+            </button>
+            <button class="color-btn" data-hex="#F6E9D8" data-text="#3A2E22">
+              <span class="color-dot cream-dot" style="background:#F6E9D8"></span>
+              <span>Cream</span>
+            </button>
+          </div>
+
+          <label class="field-label" style="margin-top:20px;">Size</label>
+          <div class="size-row">
+            <button class="size-btn active">S</button>
+            <button class="size-btn">M</button>
+            <button class="size-btn">L</button>
+            <button class="size-btn">XL</button>
+          </div>
+          <p class="size-hint">S&nbsp;Puppy &nbsp;&middot;&nbsp; M&nbsp;Medium &nbsp;&middot;&nbsp; L&nbsp;Large &nbsp;&middot;&nbsp; XL&nbsp;Big Dog</p>
+
+          <button class="btn-order">Add to Cart &rarr;</button>
+          <p class="form-fine">Free shipping over $35 &nbsp;&middot;&nbsp; Ships in 2&ndash;3 days</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- HOW IT'S MADE -->
+  <section class="made-section">
+    <div class="made-inner">
+      <p class="label" style="margin-bottom:8px;">The process</p>
+      <h2>Three steps. One perfect bandana.</h2>
+      <div class="steps-row">
+        <div class="step-block">
+          <span class="step-n">01</span>
+          <h3>You type the name</h3>
+          <p>We take it from there. Every order is made individually, not batch-printed.</p>
+        </div>
+        <div class="step-sep">&rarr;</div>
+        <div class="step-block">
+          <span class="step-n">02</span>
+          <h3>We cut it by hand</h3>
+          <p>Vinyl cut, heat-pressed by hand in Canton, MA. No cracking, no peeling.</p>
+        </div>
+        <div class="step-sep">&rarr;</div>
+        <div class="step-block">
+          <span class="step-n">03</span>
+          <h3>It's at your door</h3>
+          <p>Packed and shipped in 2&ndash;3 business days. Most orders arrive before the weekend.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF BAR -->
+  <div class="proof-bar">
+    <div class="proof-item">
+      <strong>4,000+</strong>
+      <span>Orders shipped</span>
+    </div>
+    <div class="proof-divider"></div>
+    <div class="proof-item">
+      <strong>4.9 &#9733;</strong>
+      <span>Average rating</span>
+    </div>
+    <div class="proof-divider"></div>
+    <div class="proof-item">
+      <strong>5 years</strong>
+      <span>On Etsy</span>
+    </div>
+    <div class="proof-divider"></div>
+    <div class="proof-item">
+      <strong>Canton, MA</strong>
+      <span>Family shop</span>
+    </div>
+  </div>
+
+  <!-- REVIEWS -->
+  <section class="reviews-section">
+    <div class="reviews-inner">
+      <p class="label">Reviews</p>
+      <h2>Real dogs. Real people. Real reviews.</h2>
+      <div class="reviews-grid">
+        <div class="review">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;My dog looked so good at the park. Three people asked where I got the bandana. I ordered two more.&rdquo;</p>
+          <span>Sarah M. &mdash; Boston, MA</span>
+        </div>
+        <div class="review">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;Shipped so fast. The vinyl name is crispy clean. You can tell real people made this.&rdquo;</p>
+          <span>Jake T. &mdash; Providence, RI</span>
+        </div>
+        <div class="review">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;Arrived in 2 days. Looks exactly like the preview. Couldn&rsquo;t be happier with it.&rdquo;</p>
+          <span>Michelle K. &mdash; Canton, MA</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about-section" id="about">
+    <div class="about-inner">
+      <div class="about-logo">
+        <img src="BB logo.jpeg" alt="Bentley" class="about-img" />
+      </div>
+      <div class="about-copy">
+        <p class="label">Our story</p>
+        <h2>Five years, 4,000+ orders, one family in Canton, MA.</h2>
+        <p>We started as a small Etsy shop and grew entirely on word of mouth. No ads. No factory. Just a family making genuinely good bandanas for other people&rsquo;s dogs &mdash; and treating every order like it&rsquo;s for our own.</p>
+        <a href="#personalize" class="btn-text">Order yours &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="BB logo.jpeg" alt="Bentley's Bandanas" class="footer-logo" />
+        <span>Bentley's Bandanas</span>
+      </div>
+      <p>Personalized dog bandanas &mdash; handmade in Canton, Massachusetts.</p>
+      <div class="footer-links">
+        <a href="#personalize">Shop</a>
+        <a href="#about">About</a>
+        <a href="#">Contact</a>
+        <a href="#">FAQ</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Bentley&rsquo;s Bandanas &middot; Canton, MA</p>
+    </div>
+  </footer>
+
   <script>
-    const input = document.getElementById('dog-name');
-    const preview = document.getElementById('preview-name');
-    const bandana = document.getElementById('bandana-shape');
+    const input    = document.getElementById('dog-name');
+    const svgText  = document.getElementById('bandana-text');
+    const svgPoly  = document.getElementById('bandana-poly');
 
     input.addEventListener('input', () => {
-      preview.textContent = input.value.trim() || 'Bentley';
+      const val = input.value.trim();
+      svgText.textContent = val || 'Bentley';
+      // auto-scale font
+      const len = (val || 'Bentley').length;
+      svgText.setAttribute('font-size', len > 9 ? '22' : len > 6 ? '29' : '36');
     });
 
-    document.querySelectorAll('.swatch').forEach((btn) => {
+    document.querySelectorAll('.color-btn').forEach(btn => {
       btn.addEventListener('click', () => {
-        document.querySelectorAll('.swatch').forEach((b) => b.classList.remove('active'));
+        document.querySelectorAll('.color-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        bandana.style.background = btn.dataset.color;
-        preview.style.color = btn.dataset.color === '#3A2E22' ? '#FFFBF5' : '#3A2E22';
-        if (btn.dataset.color === '#EE7F1B') preview.style.color = '#ffffff';
+        svgPoly.setAttribute('fill', btn.dataset.hex);
+        svgText.setAttribute('fill', btn.dataset.text);
+      });
+    });
+
+    document.querySelectorAll('.size-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
       });
     });
   </script>

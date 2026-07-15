@@ -190,7 +190,29 @@ h1 em {
   flex-direction: column;
   align-items: center;
 }
-.bandana { width: 100%; max-width: 320px; }
+
+/* 3D STAGE */
+.stage-3d {
+  perspective: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+}
+.bandana-3d-spin {
+  transform-style: preserve-3d;
+  animation: spin360 14s linear infinite;
+}
+.bandana-3d-spin:hover {
+  animation-play-state: paused;
+}
+@keyframes spin360 {
+  from { transform: rotateY(0deg); }
+  to   { transform: rotateY(360deg); }
+}
+
+.bandana { width: 260px; transition: width 0.35s ease; }
+.bandana[data-size="small"] { width: 168px; }
 .bandana-svg { width: 100%; height: auto; }
 .preview-note {
   font-size: 11px;
@@ -268,7 +290,7 @@ h1 em {
   gap: 8px;
 }
 .size-btn {
-  width: 44px;
+  padding: 0 20px;
   height: 44px;
   border-radius: 12px;
   border: 1.5px solid var(--line);
@@ -284,11 +306,6 @@ h1 em {
   background: var(--orange);
   border-color: var(--orange);
   color: #fff;
-}
-.size-hint {
-  margin-top: 7px;
-  font-size: 11px;
-  color: rgba(58,46,34,0.45);
 }
 
 .btn-order {

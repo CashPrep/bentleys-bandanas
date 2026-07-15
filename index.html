@@ -54,13 +54,17 @@
 
         <!-- BANDANA VISUAL -->
         <div class="bandana-wrap">
-          <div class="bandana" id="bandana">
-            <svg class="bandana-svg" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
-              <polygon id="bandana-poly" points="160,190 10,10 310,10" fill="#EE7F1B"/>
-              <text id="bandana-text" x="160" y="88" text-anchor="middle"
-                font-family="Fredoka, sans-serif" font-size="36" font-weight="700" fill="white"
-                dominant-baseline="middle">Bentley</text>
-            </svg>
+          <div class="stage-3d">
+            <div id="bandanaSpin" class="bandana-3d-spin">
+              <div class="bandana" id="bandana" data-size="regular">
+                <svg class="bandana-svg" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+                  <polygon id="bandana-poly" points="160,190 10,10 310,10" fill="#EE7F1B"/>
+                  <text id="bandana-text" x="160" y="88" text-anchor="middle"
+                    font-family="Fredoka, sans-serif" font-size="36" font-weight="700" fill="white"
+                    dominant-baseline="middle">Bentley</text>
+                </svg>
+              </div>
+            </div>
           </div>
           <p class="preview-note">Live preview &mdash; updates as you type</p>
         </div>
@@ -100,12 +104,9 @@
 
           <label class="field-label" style="margin-top:20px;">Size</label>
           <div class="size-row">
-            <button class="size-btn active">S</button>
-            <button class="size-btn">M</button>
-            <button class="size-btn">L</button>
-            <button class="size-btn">XL</button>
+            <button class="size-btn">Small</button>
+            <button class="size-btn active">Regular</button>
           </div>
-          <p class="size-hint">S&nbsp;Puppy &nbsp;&middot;&nbsp; M&nbsp;Medium &nbsp;&middot;&nbsp; L&nbsp;Large &nbsp;&middot;&nbsp; XL&nbsp;Big Dog</p>
 
           <button class="btn-order">Add to Cart &rarr;</button>
           <p class="form-fine">Free shipping over $35 &nbsp;&middot;&nbsp; Ships in 2&ndash;3 days</p>
@@ -249,6 +250,8 @@
       btn.addEventListener('click', () => {
         document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
+        const isSmall = btn.textContent.trim().toLowerCase() === 'small';
+        document.getElementById('bandana').dataset.size = isSmall ? 'small' : 'regular';
       });
     });
   </script>

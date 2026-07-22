@@ -201,14 +201,6 @@ h1 em {
 }
 .bandana-3d-spin {
   transform-style: preserve-3d;
-  animation: spin360 14s linear infinite;
-}
-.bandana-3d-spin:hover {
-  animation-play-state: paused;
-}
-@keyframes spin360 {
-  from { transform: rotateY(0deg); }
-  to   { transform: rotateY(360deg); }
 }
 
 .bandana { width: 260px; transition: width 0.35s ease; }
